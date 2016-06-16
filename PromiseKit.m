@@ -482,7 +482,7 @@ AnyPromise *PMKWhen(id promises) {
     }
 
 #ifndef PMKDisableProgress
-    NSProgress *progress = [NSProgress progressWithTotalUnitCount:[promises count]];
+    NSProgress *progress = [NSProgress progressWithTotalUnitCount:(NSInteger)[promises count]];
     progress.pausable = NO;
     progress.cancellable = NO;
 #else
